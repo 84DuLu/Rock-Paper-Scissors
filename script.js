@@ -1,6 +1,3 @@
-let playerScore = 0;
-let computerScore = 0;
-
 function getComputerChoice() {
     let numberForChoice = getRndInteger(0, 2);
 
@@ -45,6 +42,32 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+function game() {
+    let winner;
+    let playerScore = 0;
+    let computerScore = 0;
+
+    for (let i = 0; i < 5; i++) {
+        winner = playRound(getPlayerChoice, getComputerChoice);
+        if (winner === "player") {
+            playerScore += 1;   
+        } else if (winner === "computer") {
+            computerScore += 1;
+        }
+        console.log(`PLAYER  ${playerScore}  :  ${computerScore}  COMPUTER`);
+    }
+
+    if (playerScore > computerScore) {
+        console.log("PLAYER WINS!!!");
+    } else if (playerScore < computerScore) {
+        console.log("COMPUTER WINS!!!");
+    } else {
+        console.log("TIE!!!");
+    }
+}
+
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+game();
