@@ -5,8 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <link rel="icon" href="./img/clown.png" type="image/png">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="header">
+        <h1 class="title">ROCK  PAPER  SCISSORS</h1>
+    </div>
+    <div class="body">
+        <div class="scores-board">
+            <h2>SCORE</h2>
+            <div class="score">
+                <div class="player-score-board">
+                    <div class="player">YOU</div>
+                    <div class="point" id="player-score">0</div>
+                </div>
+                <div class="computer-score-board">
+                    <div class="player">AI</div>
+                    <div class="point" id="computer-score">0</div>
+                </div>
+            </div>
+        </div>
+        <div class="info">First one to get five points wins!</div>
+        <div class="buttons">
+            <button class="button" id="rock">👊</button>
+            <button class="button" id="scissors">✌️</button>
+            <button class="button" id="paper">🖐️</button>
+        </div>
+        <button class="start-button">NEW GAME</button>
+    </div>
+    <div class="footer">
+        <div>Copyright &copy; snow</div>
+    </div>
+
+    <audio src="./sound/win.wav" id="win-sound"></audio>
+    <audio src="./sound/lose.mp3" id="lose-sound"></audio>
+    <audio src="./sound/click.mp3" id="click-sound"></audio>
     <script src="./script.js"></script>
 </body>
 </html>
